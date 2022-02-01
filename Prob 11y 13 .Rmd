@@ -1,0 +1,34 @@
+---
+title: "Problema 11"
+author: "Álvarez Letona Manuel"
+date: "31/1/2022"
+output: github_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+### Problema 11
+
+```{r}
+##Calculo de Pendiente
+J<-110/1200
+##Formacion de la Función
+t<-function(L,J){
+  0.3*(L/(J**(1/4)))**0.76
+}
+##Comprobación
+t(1200,J)
+```
+
+### Problema 13
+```{r}
+#gbif_peru
+#gbif_peru %>% select(stateProvince) %>% unique
+#gbif_peru %>% group_by(stateProvince) %>% count() %>% view()
+#Con dia y año
+#gbif_peru %>% select(stateProvince) %>% unique
+#gbif_peru %>% group_by(stateProvince,year,day) %>% count() %>% arrange(day,year)
+```
+

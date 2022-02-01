@@ -1,0 +1,15 @@
+##Calculo de Pendiente
+J<-110/1200
+##Formacion de la Muncion
+t<-function(L,J){
+  0.3*(L/(J**(1/4)))**0.76
+}
+##Comprobación
+t(1200,J)
+
+install.packages("tidyverse")
+library(tidyverse)
+observaciones<-gbif_peru
+observaciones %>% select(stateProvince) %>% unique
+observaciones %>% group_by(stateProvince,year,day) %>% count() %>% arrange(day,year)
+

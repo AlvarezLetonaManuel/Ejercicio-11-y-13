@@ -1,0 +1,8 @@
+"0","library(tidyverse)
+#Departamentos
+observaciones<-gbif_peru
+observaciones %>% select(stateProvince) %>% unique
+"
+"0","observaciones %>% group_by(stateProvince) %>% count() %>% view()"
+"0","#Con dia y año"
+"0","observaciones %>% select(stateProvince) %>% unique"
